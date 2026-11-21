@@ -12,10 +12,6 @@ From v1.0.0, releases contain the Go model, embedded SQL migrations, and import
 contracts. Java source, jOOQ generation, and Maven publication have been retired.
 See the [v1 migration guide](docs/migration-to-v1.md) before upgrading.
 
-TODO: Tag a model release with the new module path, then update the version
-below. The retained v1.0.0 predates the path change. See the
-[release order](docs/ci.md#organization-migration-release-order).
-
 <!-- x-release-please-start-version -->
 ```bash
 go get github.com/echovisionlab/open-discogs-model@v1.0.1

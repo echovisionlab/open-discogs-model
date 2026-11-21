@@ -51,9 +51,7 @@ Go packages, and checks release convergence on PostgreSQL 15 and 18. Releases
 repeat those checks at the release commit and download the tagged Go module.
 Java, jOOQ, Gradle, and Maven publication are no longer part of CI from v1.0.0.
 
-## Organization migration release order
+## Releasing module changes
 
-Tag a new model release containing the `github.com/echovisionlab/open-discogs-model`
-module path first. Then bump the model dependency in Go API and Go Batch and
-regenerate their `go.sum` entries before releasing either application. Existing
-tags predate the module path change.
+Publish the model tag before updating the Go API and Go Batch. Each consumer
+commits its new dependency version in `go.mod` and the checksums in `go.sum`.
